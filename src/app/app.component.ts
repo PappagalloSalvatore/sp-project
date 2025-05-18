@@ -11,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'spProject';
   src = "assets/images/gym-video.mp4";
+  isMenuOpen: boolean = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }
