@@ -415,8 +415,29 @@ header
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
 .header-area .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
+  background-color: black;
   width: 100%;
+}
+
+.header-area .main-nav .nav.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Sfondo bianco */
+  position: absolute; /* Sovrappone il menu */
+  top: 80px; /* Posizionato sotto l'header */
+  right: 0;
+  width: 100%; /* Occupa tutta la larghezza */
+  z-index: 99; /* In cima ad altri contenuti */
+}
+
+.header-area .main-nav .menu-trigger.active span {
+  background-color: transparent; /* La barra centrale scompare */
+}
+.header-area .main-nav .menu-trigger.active span:before {
+  transform: translateY(6px) translateX(1px) rotate(45deg); /* La barra superiore ruota */
+}
+.header-area .main-nav .menu-trigger.active span:after {
+  transform: translateY(-6px) translateX(1px) rotate(-45deg); /* La barra inferiore ruota */
 }
 
 .header-area .main-nav .menu-trigger.active span:before {
